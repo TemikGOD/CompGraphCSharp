@@ -48,6 +48,13 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.backgroundWorkerProgress = new System.ComponentModel.BackgroundWorker();
             this.labelTime = new System.Windows.Forms.Label();
+            this.embossToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sharpeningToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.motionBlurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.scharrYToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.scharrXToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.prewittToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.prewittXToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -106,7 +113,14 @@
             // 
             this.toolStripMenuItemMatrix.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItemBlur,
-            this.toolStripMenuItemGaussian});
+            this.toolStripMenuItemGaussian,
+            this.embossToolStripMenuItem,
+            this.sharpeningToolStripMenuItem,
+            this.motionBlurToolStripMenuItem,
+            this.scharrYToolStripMenuItem,
+            this.scharrXToolStripMenuItem,
+            this.prewittToolStripMenuItem,
+            this.prewittXToolStripMenuItem});
             this.toolStripMenuItemMatrix.Name = "toolStripMenuItemMatrix";
             this.toolStripMenuItemMatrix.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItemMatrix.Text = "Matrix";
@@ -121,7 +135,7 @@
             // toolStripMenuItemGaussian
             // 
             this.toolStripMenuItemGaussian.Name = "toolStripMenuItemGaussian";
-            this.toolStripMenuItemGaussian.Size = new System.Drawing.Size(121, 22);
+            this.toolStripMenuItemGaussian.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItemGaussian.Text = "Gaussian";
             // 
             // toolStripMenuItemSpot
@@ -132,7 +146,7 @@
             this.toolStripMenuItemGrayscale,
             this.toolStripMenuItemInversion});
             this.toolStripMenuItemSpot.Name = "toolStripMenuItemSpot";
-            this.toolStripMenuItemSpot.Size = new System.Drawing.Size(108, 22);
+            this.toolStripMenuItemSpot.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItemSpot.Text = "Spot";
             // 
             // toolStripMenuItemBinarization
@@ -219,6 +233,55 @@
             this.labelTime.TabIndex = 6;
             this.labelTime.Text = "Time:";
             // 
+            // embossToolStripMenuItem
+            // 
+            this.embossToolStripMenuItem.Name = "embossToolStripMenuItem";
+            this.embossToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.embossToolStripMenuItem.Text = "Emboss";
+            this.embossToolStripMenuItem.Click += new System.EventHandler(this.embossToolStripMenuItem_Click);
+            // 
+            // sharpeningToolStripMenuItem
+            // 
+            this.sharpeningToolStripMenuItem.Name = "sharpeningToolStripMenuItem";
+            this.sharpeningToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sharpeningToolStripMenuItem.Text = "Sharpening";
+            this.sharpeningToolStripMenuItem.Click += new System.EventHandler(this.sharpeningToolStripMenuItem_Click);
+            // 
+            // motionBlurToolStripMenuItem
+            // 
+            this.motionBlurToolStripMenuItem.Name = "motionBlurToolStripMenuItem";
+            this.motionBlurToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.motionBlurToolStripMenuItem.Text = "Motion Blur(3)";
+            this.motionBlurToolStripMenuItem.Click += new System.EventHandler(this.motionBlurToolStripMenuItem_Click);
+            // 
+            // scharrYToolStripMenuItem
+            // 
+            this.scharrYToolStripMenuItem.Name = "scharrYToolStripMenuItem";
+            this.scharrYToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.scharrYToolStripMenuItem.Text = "ScharrY";
+            this.scharrYToolStripMenuItem.Click += new System.EventHandler(this.scharrYToolStripMenuItem_Click);
+            // 
+            // scharrXToolStripMenuItem
+            // 
+            this.scharrXToolStripMenuItem.Name = "scharrXToolStripMenuItem";
+            this.scharrXToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.scharrXToolStripMenuItem.Text = "ScharrX";
+            this.scharrXToolStripMenuItem.Click += new System.EventHandler(this.scharrXToolStripMenuItem_Click);
+            // 
+            // prewittToolStripMenuItem
+            // 
+            this.prewittToolStripMenuItem.Name = "prewittToolStripMenuItem";
+            this.prewittToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.prewittToolStripMenuItem.Text = "PrewittY";
+            this.prewittToolStripMenuItem.Click += new System.EventHandler(this.prewittToolStripMenuItem_Click);
+            // 
+            // prewittXToolStripMenuItem
+            // 
+            this.prewittXToolStripMenuItem.Name = "prewittXToolStripMenuItem";
+            this.prewittXToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.prewittXToolStripMenuItem.Text = "PrewittX";
+            this.prewittXToolStripMenuItem.Click += new System.EventHandler(this.prewittXToolStripMenuItem_Click);
+            // 
             // MainFrame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -261,6 +324,13 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.ComponentModel.BackgroundWorker backgroundWorkerProgress;
         private System.Windows.Forms.Label labelTime;
+        private System.Windows.Forms.ToolStripMenuItem embossToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sharpeningToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem motionBlurToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem scharrYToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem scharrXToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem prewittToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem prewittXToolStripMenuItem;
     }
 }
 
