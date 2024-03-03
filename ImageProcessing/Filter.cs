@@ -1,15 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using System.Drawing;
-using System.Diagnostics;
-using static System.Net.Mime.MediaTypeNames;
 using System.Drawing.Imaging;
 using System.Runtime.InteropServices;
-using System.Windows.Forms;
-using System.Threading;
 
 namespace ImageProcessing
 {
@@ -17,8 +9,6 @@ namespace ImageProcessing
     {
         public BitmapData ProcessImage(BitmapData data, int depth, byte[] buffer, System.ComponentModel.BackgroundWorker backgroundWorker1)
         {
-            /*byte[] bufferWork = new byte[buffer.Length];
-            buffer.CopyTo(bufferWork, 0);*/
             Parallel.Invoke(
                 () => {
                     for (int i = 0; i < data.Height; i++)
