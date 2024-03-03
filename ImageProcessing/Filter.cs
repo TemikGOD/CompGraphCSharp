@@ -24,7 +24,7 @@ namespace ImageProcessing
                     for (int i = 0; i < data.Height; i++)
                     {
                         CalculateNewPixelColor(buffer, 0, i, data.Width, depth);
-                        backgroundWorker1.ReportProgress((int)((float)Clamp(i + Environment.ProcessorCount, 0, data.Width) / data.Width * 100));
+                        backgroundWorker1.ReportProgress((int)((float)Clamp(i * Environment.ProcessorCount, 0, data.Width) / data.Width * 100));
                     }
                 },
                 () =>

@@ -94,5 +94,47 @@ namespace ImageProcessing
             BlurFilter filter = new BlurFilter();
             backgroundWorkerProgress.RunWorkerAsync(filter);
         }
+
+        private void embossToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EmbossFilter filter = new EmbossFilter();
+            backgroundWorkerProgress.RunWorkerAsync(filter);
+        }
+
+        private void sharpeningToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SharpeningFilter filter = new SharpeningFilter();
+            backgroundWorkerProgress.RunWorkerAsync(filter);
+        }
+
+        private void motionBlurToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MotionBlur filter = new MotionBlur(3);
+            backgroundWorkerProgress.RunWorkerAsync(filter);
+        }
+
+        private void scharrYToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ScharrY filter = new ScharrY();
+            backgroundWorkerProgress.RunWorkerAsync(filter);
+        }
+
+        private void scharrXToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ScharrX filter = new ScharrX();
+            backgroundWorkerProgress.RunWorkerAsync(filter);
+        }
+
+        private void prewittToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PrewittY filter = new PrewittY();
+            backgroundWorkerProgress.RunWorkerAsync(filter);
+        }
+
+        private void prewittXToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PrewittX filter = new PrewittX();
+            backgroundWorkerProgress.RunWorkerAsync(filter);
+        }
     }
 }
