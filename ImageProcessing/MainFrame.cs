@@ -156,5 +156,11 @@ namespace ImageProcessing
             WavesXFilter filter = new WavesXFilter();
             backgroundWorkerProgress.RunWorkerAsync(filter);
         }
+
+        private void wavesXToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WavesYFilter filter = new WavesYFilter();
+            backgroundWorkerProgress.RunWorkerAsync(filter);
+        }
     }
 }

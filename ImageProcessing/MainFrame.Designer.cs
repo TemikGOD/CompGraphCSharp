@@ -319,6 +319,7 @@
             this.wavesXToolStripMenuItem.Name = "wavesXToolStripMenuItem";
             this.wavesXToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
             this.wavesXToolStripMenuItem.Text = "WavesY";
+            this.wavesXToolStripMenuItem.Click += new System.EventHandler(this.wavesXToolStripMenuItem_Click);
             // 
             // glassToolStripMenuItem
             // 

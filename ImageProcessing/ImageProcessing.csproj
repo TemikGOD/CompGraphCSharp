@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="DotetFilters\Turn.cs" />
     <Compile Include="DotetFilters\WavesXFilter.cs" />
+    <Compile Include="DotetFilters\WavesYFilter.cs" />
     <Compile Include="MatrixFilters\BlurFilter.cs" />
     <Compile Include="MatrixFilters\EmbossFilter.cs" />
     <Compile Include="DotetFilters\Filter.cs" />
