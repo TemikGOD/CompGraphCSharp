@@ -50,14 +50,9 @@ namespace ImageProcessing
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
             timer.Restart();
-            var rect = new Rectangle(0, 0, image.Width, image.Height);
-            var data = image.LockBits(rect, ImageLockMode.ReadWrite, image.PixelFormat);
-            var depth = Bitmap.GetPixelFormatSize(data.PixelFormat) / 8; //bytes per pixel
-            var buffer = new byte[data.Width * data.Height * depth];
-            Marshal.Copy(data.Scan0, buffer, 0, buffer.Length);
-            BitmapData newImageData = ((Filter)e.Argument).ProcessImage(data, depth, buffer, backgroundWorkerProgress);
+            Bitmap newImage = ((Filter)e.Argument).ProcessImage(image, backgroundWorkerProgress);
             if (backgroundWorkerProgress.CancellationPending != true)
-                image.UnlockBits(newImageData);
+                image = newImage;
         }
 
         private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
