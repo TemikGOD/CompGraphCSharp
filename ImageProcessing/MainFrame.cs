@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ImageProcessing.MatrixFilters;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -129,6 +130,12 @@ namespace ImageProcessing
         private void prewittXToolStripMenuItem_Click(object sender, EventArgs e)
         {
             PrewittX filter = new PrewittX();
+            backgroundWorkerProgress.RunWorkerAsync(filter);
+        }
+
+        private void shiftX50ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShiftFilter filter = new ShiftFilter(50, 0);
             backgroundWorkerProgress.RunWorkerAsync(filter);
         }
     }
