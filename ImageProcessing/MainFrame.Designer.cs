@@ -49,13 +49,13 @@
             this.toolStripMenuItemBrightness = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemGrayscale = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemInversion = new System.Windows.Forms.ToolStripMenuItem();
+            this.shiftX50ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBoxImage = new System.Windows.Forms.PictureBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.backgroundWorkerProgress = new System.ComponentModel.BackgroundWorker();
             this.labelTime = new System.Windows.Forms.Label();
-            this.shiftX50ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -68,7 +68,7 @@
             this.toolStripMenuItemFilters});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(873, 24);
+            this.menuStrip2.Size = new System.Drawing.Size(861, 24);
             this.menuStrip2.TabIndex = 1;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -85,20 +85,20 @@
             // toolStripMenuItemOpen
             // 
             this.toolStripMenuItemOpen.Name = "toolStripMenuItemOpen";
-            this.toolStripMenuItemOpen.Size = new System.Drawing.Size(121, 22);
+            this.toolStripMenuItemOpen.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItemOpen.Text = "Open...";
             this.toolStripMenuItemOpen.Click += new System.EventHandler(this.toolStripMenuItemOpen_Click);
             // 
             // toolStripMenuItemSave
             // 
             this.toolStripMenuItemSave.Name = "toolStripMenuItemSave";
-            this.toolStripMenuItemSave.Size = new System.Drawing.Size(121, 22);
+            this.toolStripMenuItemSave.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItemSave.Text = "Save";
             // 
             // toolStripMenuItemSaveAs
             // 
             this.toolStripMenuItemSaveAs.Name = "toolStripMenuItemSaveAs";
-            this.toolStripMenuItemSaveAs.Size = new System.Drawing.Size(121, 22);
+            this.toolStripMenuItemSaveAs.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItemSaveAs.Text = "Save as...";
             // 
             // toolStripMenuItemFilters
@@ -226,12 +226,19 @@
             this.toolStripMenuItemInversion.Text = "Inversion";
             this.toolStripMenuItemInversion.Click += new System.EventHandler(this.toolStripMenuItemInversion_Click);
             // 
+            // shiftX50ToolStripMenuItem
+            // 
+            this.shiftX50ToolStripMenuItem.Name = "shiftX50ToolStripMenuItem";
+            this.shiftX50ToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.shiftX50ToolStripMenuItem.Text = "ShiftX(-50)";
+            this.shiftX50ToolStripMenuItem.Click += new System.EventHandler(this.shiftX50ToolStripMenuItem_Click);
+            // 
             // pictureBoxImage
             // 
             this.pictureBoxImage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBoxImage.Location = new System.Drawing.Point(0, 24);
             this.pictureBoxImage.Name = "pictureBoxImage";
-            this.pictureBoxImage.Size = new System.Drawing.Size(873, 482);
+            this.pictureBoxImage.Size = new System.Drawing.Size(861, 424);
             this.pictureBoxImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxImage.TabIndex = 2;
             this.pictureBoxImage.TabStop = false;
@@ -241,13 +248,13 @@
             this.progressBar1.Dock = System.Windows.Forms.DockStyle.Left;
             this.progressBar1.Location = new System.Drawing.Point(1, 14);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(766, 24);
+            this.progressBar1.Size = new System.Drawing.Size(362, 24);
             this.progressBar1.TabIndex = 3;
             // 
             // buttonCancel
             // 
             this.buttonCancel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.buttonCancel.Location = new System.Drawing.Point(797, 14);
+            this.buttonCancel.Location = new System.Drawing.Point(785, 14);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 24);
             this.buttonCancel.TabIndex = 4;
@@ -260,10 +267,10 @@
             this.groupBox1.Controls.Add(this.progressBar1);
             this.groupBox1.Controls.Add(this.buttonCancel);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox1.Location = new System.Drawing.Point(0, 467);
+            this.groupBox1.Location = new System.Drawing.Point(0, 409);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(1);
-            this.groupBox1.Size = new System.Drawing.Size(873, 39);
+            this.groupBox1.Size = new System.Drawing.Size(861, 39);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             // 
@@ -284,18 +291,11 @@
             this.labelTime.TabIndex = 6;
             this.labelTime.Text = "Time:";
             // 
-            // shiftX50ToolStripMenuItem
-            // 
-            this.shiftX50ToolStripMenuItem.Name = "shiftX50ToolStripMenuItem";
-            this.shiftX50ToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
-            this.shiftX50ToolStripMenuItem.Text = "ShiftX(-50)";
-            this.shiftX50ToolStripMenuItem.Click += new System.EventHandler(this.shiftX50ToolStripMenuItem_Click);
-            // 
             // MainFrame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(873, 506);
+            this.ClientSize = new System.Drawing.Size(861, 448);
             this.Controls.Add(this.labelTime);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBoxImage);

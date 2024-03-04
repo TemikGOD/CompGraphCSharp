@@ -22,7 +22,7 @@ namespace ImageProcessing.MatrixFilters
             if (x + ShiftX < width - 1 && y + ShiftY < buffer.Length / depth / width - 1)
             {
                 for (var i = 0; i < depth; i++)
-                    offset[i] = (((y + ShiftY) * width) + x + ShiftX) * depth;
+                    offset[i] = (((y + ShiftY) * width) + x + ShiftX) * depth + i;
                 for (int i = 0; i < depth; i++)
                     resultColor[i] = buffer[offset[i]];
             }
