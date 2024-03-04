@@ -1,4 +1,5 @@
-﻿using ImageProcessing.MatrixFilters;
+﻿using ImageProcessing.DotetFilters;
+using ImageProcessing.MatrixFilters;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -146,7 +147,8 @@ namespace ImageProcessing
 
         private void turnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Turn filter = new Turn(Math.PI/4, pictureBoxImage.Image.Width/2, pictureBoxImage.Image.Height/2);
+            backgroundWorkerProgress.RunWorkerAsync(filter);
         }
     }
 }
