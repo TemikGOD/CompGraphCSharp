@@ -138,5 +138,10 @@ namespace ImageProcessing
             ShiftFilter filter = new ShiftFilter(50, 0);
             backgroundWorkerProgress.RunWorkerAsync(filter);
         }
+
+        private void toolStripMenuItemBrightness_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
