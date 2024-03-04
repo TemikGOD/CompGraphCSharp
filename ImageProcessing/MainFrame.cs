@@ -1,6 +1,4 @@
-﻿using ImageProcessing.DotetFilters;
-using ImageProcessing.MatrixFilters;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;

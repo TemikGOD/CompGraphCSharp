@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing.Imaging;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -9,18 +9,18 @@ using System.Threading.Tasks;
 
 namespace ImageProcessing
 {
-    internal class EmbossFilter : MatrixFilter
+    abstract class BinarizationFilter : Filter
     {
-        public EmbossFilter() {
-            kernel = new float[,] { { 0, 1, 0 }, 
-                                    { 1, 0, -1 }, 
-                                    { 0, -1, 0 } };
-        }
+        protected byte threshold;
 
         public override Bitmap ProcessImage(Bitmap sourceImage, System.ComponentModel.BackgroundWorker backgroundWorker1)
         {
-            GrayscaleConversionFilter filter = new GrayscaleConversionFilter();
-            sourceImage = filter.ProcessImage(sourceImage, backgroundWorker1);
+            if (sourceImage.PixelFormat != PixelFormat.Format8bppIndexed)
+            {
+                GrayscaleConversionFilter filter = new GrayscaleConversionFilter();
+                sourceImage = filter.ProcessImage(sourceImage, backgroundWorker1);
+            }
+            threshold = CalculateThreshold(sourceImage);
             var rect = new Rectangle(0, 0, sourceImage.Width, sourceImage.Height);
             var data = sourceImage.LockBits(rect, ImageLockMode.ReadWrite, sourceImage.PixelFormat);
             var depth = Bitmap.GetPixelFormatSize(data.PixelFormat) / 8; //bytes per pixel
@@ -60,25 +60,17 @@ namespace ImageProcessing
 
         protected override byte[] CalculateNewPixelColor(byte[] buffer, int x, int y, int width, int depth)
         {
-            int radiusX = kernel.GetLength(0) / 2;
-            int radiusY = kernel.GetLength(1) / 2;
-            float result = 0;
-            for (int l = -radiusY; l <= radiusY; l++)
-                for (int k = -radiusX; k <= radiusX; k++)
-                {
-                    int idX = Clamp(x + k, 0, width - 1);
-                    int idY = Clamp(y + l, 0, buffer.Length / depth / width - 1);
-                    var offsetNeighbor = CalculateOffset(idX, idY, width, depth);
-                    result += buffer[offsetNeighbor[0]] * kernel[k + radiusX, l + radiusY];
-                }
-
-            result = ((int)result + 255) / 2;
-
             var offset = CalculateOffset(x, y, width, depth);
-            var resultColor = new byte[depth];
-            for (int i = 0; i < depth; i++)
-                resultColor[i] = (byte)result;
-            return resultColor;
+            var result = new byte[depth];
+            if (buffer[offset[0]] < threshold)
+                for (int i = 0; i < depth; i++)
+                    result[i] = 0;
+            else
+                for (int i = 0; i < depth; i++)
+                    result[i] = 255;
+            return result;
         }
+
+        protected abstract byte CalculateThreshold(Bitmap sourceImage);
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ImageProcessing
 {
-    abstract class MatrixFilter : Filter
+    internal class MatrixFilter : Filter
     {
         protected float[,] kernel;
         protected MatrixFilter() { }
@@ -27,9 +27,10 @@ namespace ImageProcessing
                     int idY = Clamp(y + l, 0, buffer.Length / depth / width - 1);
                     var offsetNeighbor = CalculateOffset(idX, idY, width, depth);
                     for (int i = 0; i < depth; i++) {
-                        result[i] += buffer[offsetNeighbor[i]] * kernel[k + radiusX, l + radiusY];
+                        result[i] += buffer[offsetNeighbor[0]] * kernel[k + radiusX, l + radiusY];
                     }
                 }
+            var offset = CalculateOffset(x, y, width, depth);
             var resultColor = new byte[depth];
             for (int i = 0; i < depth; i++)
                 resultColor[i] = (byte)Clamp((int)result[i], 0, 255); 
