@@ -71,10 +71,7 @@ namespace ImageProcessing
                     var offsetNeighbor = CalculateOffset(idX, idY, width, depth);
                     result += buffer[offsetNeighbor[0]] * kernel[k + radiusX, l + radiusY];
                 }
-
             result = ((int)result + 255) / 2;
-
-            var offset = CalculateOffset(x, y, width, depth);
             var resultColor = new byte[depth];
             for (int i = 0; i < depth; i++)
                 resultColor[i] = (byte)result;
