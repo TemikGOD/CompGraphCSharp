@@ -46,7 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
+    <Compile Include="DotetFilters\Turn.cs" />
+=======
     <Compile Include="DotedFilters\BinarizationFilter.cs" />
+>>>>>>> development
     <Compile Include="MatrixFilters\BlurFilter.cs" />
     <Compile Include="MatrixFilters\EmbossFilter.cs" />
     <Compile Include="DotedFilters\Filter.cs" />
