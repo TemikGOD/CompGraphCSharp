@@ -51,15 +51,16 @@
             this.toolStripMenuItemInversion = new System.Windows.Forms.ToolStripMenuItem();
             this.shiftX50ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.turnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.wavesYToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.wavesXToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.glassToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBoxImage = new System.Windows.Forms.PictureBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.backgroundWorkerProgress = new System.ComponentModel.BackgroundWorker();
             this.labelTime = new System.Windows.Forms.Label();
-            this.wavesYToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.wavesXToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.glassToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -210,6 +211,8 @@
             // 
             // toolStripMenuItemBinarization
             // 
+            this.toolStripMenuItemBinarization.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1});
             this.toolStripMenuItemBinarization.Name = "toolStripMenuItemBinarization";
             this.toolStripMenuItemBinarization.Size = new System.Drawing.Size(185, 22);
             this.toolStripMenuItemBinarization.Text = "Binarization";
@@ -248,6 +251,27 @@
             this.turnToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
             this.turnToolStripMenuItem.Text = "Turn";
             this.turnToolStripMenuItem.Click += new System.EventHandler(this.turnToolStripMenuItem_Click);
+            // 
+            // wavesYToolStripMenuItem
+            // 
+            this.wavesYToolStripMenuItem.Name = "wavesYToolStripMenuItem";
+            this.wavesYToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.wavesYToolStripMenuItem.Text = "WavesX";
+            this.wavesYToolStripMenuItem.Click += new System.EventHandler(this.wavesYToolStripMenuItem_Click);
+            // 
+            // wavesXToolStripMenuItem
+            // 
+            this.wavesXToolStripMenuItem.Name = "wavesXToolStripMenuItem";
+            this.wavesXToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.wavesXToolStripMenuItem.Text = "WavesY";
+            this.wavesXToolStripMenuItem.Click += new System.EventHandler(this.wavesXToolStripMenuItem_Click);
+            // 
+            // glassToolStripMenuItem
+            // 
+            this.glassToolStripMenuItem.Name = "glassToolStripMenuItem";
+            this.glassToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.glassToolStripMenuItem.Text = "Glass";
+            this.glassToolStripMenuItem.Click += new System.EventHandler(this.glassToolStripMenuItem_Click);
             // 
             // pictureBoxImage
             // 
@@ -307,26 +331,12 @@
             this.labelTime.TabIndex = 6;
             this.labelTime.Text = "Time:";
             // 
-            // wavesYToolStripMenuItem
+            // toolStripMenuItem1
             // 
-            this.wavesYToolStripMenuItem.Name = "wavesYToolStripMenuItem";
-            this.wavesYToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
-            this.wavesYToolStripMenuItem.Text = "WavesX";
-            this.wavesYToolStripMenuItem.Click += new System.EventHandler(this.wavesYToolStripMenuItem_Click);
-            // 
-            // wavesXToolStripMenuItem
-            // 
-            this.wavesXToolStripMenuItem.Name = "wavesXToolStripMenuItem";
-            this.wavesXToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
-            this.wavesXToolStripMenuItem.Text = "WavesY";
-            this.wavesXToolStripMenuItem.Click += new System.EventHandler(this.wavesXToolStripMenuItem_Click);
-            // 
-            // glassToolStripMenuItem
-            // 
-            this.glassToolStripMenuItem.Name = "glassToolStripMenuItem";
-            this.glassToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
-            this.glassToolStripMenuItem.Text = "Glass";
-            this.glassToolStripMenuItem.Click += new System.EventHandler(this.glassToolStripMenuItem_Click);
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem1.Text = "Otsu metod";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // MainFrame
             // 
@@ -382,6 +392,7 @@
         private System.Windows.Forms.ToolStripMenuItem wavesYToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem wavesXToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem glassToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
     }
 }
 
