@@ -326,6 +326,7 @@
             this.glassToolStripMenuItem.Name = "glassToolStripMenuItem";
             this.glassToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
             this.glassToolStripMenuItem.Text = "Glass";
+            this.glassToolStripMenuItem.Click += new System.EventHandler(this.glassToolStripMenuItem_Click);
             // 
             // MainFrame
             // 

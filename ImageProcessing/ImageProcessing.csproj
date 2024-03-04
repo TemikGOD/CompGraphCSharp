@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DotetFilters\GlassFilter.cs" />
     <Compile Include="DotetFilters\Turn.cs" />
     <Compile Include="DotetFilters\WavesXFilter.cs" />
     <Compile Include="DotetFilters\WavesYFilter.cs" />

@@ -162,5 +162,12 @@ namespace ImageProcessing
             WavesYFilter filter = new WavesYFilter();
             backgroundWorkerProgress.RunWorkerAsync(filter);
         }
+
+        private void glassToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Random rand = new Random();
+            GlassFilter filter = new GlassFilter(rand);
+            backgroundWorkerProgress.RunWorkerAsync(filter);
+        }
     }
 }
