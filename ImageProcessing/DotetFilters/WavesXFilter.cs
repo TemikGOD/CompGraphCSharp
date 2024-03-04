@@ -1,28 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ImageProcessing.MatrixFilters
+namespace ImageProcessing.DotetFilters
 {
-    internal class ShiftFilter : Filter
+    internal class WavesXFilter : Filter
     {
-        protected int ShiftX, ShiftY;
-        public ShiftFilter(int shiftX, int shiftY)
-        {
-            ShiftX = shiftX;
-            ShiftY = shiftY;
-        }
-
         protected override byte[] CalculateNewPixelColor(byte[] buffer, int x, int y, int width, int depth)
         {
             var offset = new int[depth];
             var resultColor = new byte[depth];
-            if (x + ShiftX < width - 1 && y + ShiftY < buffer.Length / depth / width - 1)
+            int NewX;
+            NewX = (int)(x+20*Math.Sin(2*Math.PI*y/60));
+            if (NewX >= 0 && NewX < width - 1 && y >= 0 && y < buffer.Length / depth / width - 1)
             {
                 for (var i = 0; i < depth; i++)
-                    offset[i] = (((y + ShiftY) * width) + x + ShiftX) * depth + i;
+                    offset[i] = ((y * width) + NewX) * depth + i;
+
                 for (int i = 0; i < depth; i++)
                     resultColor[i] = buffer[offset[i]];
             }
