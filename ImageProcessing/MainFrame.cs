@@ -150,5 +150,11 @@ namespace ImageProcessing
             Turn filter = new Turn(Math.PI/4, pictureBoxImage.Image.Width/2, pictureBoxImage.Image.Height/2);
             backgroundWorkerProgress.RunWorkerAsync(filter);
         }
+
+        private void wavesYToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WavesXFilter filter = new WavesXFilter();
+            backgroundWorkerProgress.RunWorkerAsync(filter);
+        }
     }
 }
