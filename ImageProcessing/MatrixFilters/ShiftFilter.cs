@@ -8,7 +8,7 @@ namespace ImageProcessing.MatrixFilters
 {
     internal class ShiftFilter : Filter
     {
-        int ShiftX, ShiftY;
+        protected int ShiftX, ShiftY;
         public ShiftFilter(int shiftX, int shiftY)
         {
             ShiftX = shiftX;

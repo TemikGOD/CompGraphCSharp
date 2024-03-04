@@ -299,6 +299,7 @@
             this.turnToolStripMenuItem.Name = "turnToolStripMenuItem";
             this.turnToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
             this.turnToolStripMenuItem.Text = "Turn";
+            this.turnToolStripMenuItem.Click += new System.EventHandler(this.turnToolStripMenuItem_Click);
             // 
             // MainFrame
             // 

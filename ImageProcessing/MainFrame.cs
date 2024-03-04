@@ -143,5 +143,10 @@ namespace ImageProcessing
         {
 
         }
+
+        private void turnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
