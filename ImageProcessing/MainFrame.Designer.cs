@@ -56,6 +56,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.backgroundWorkerProgress = new System.ComponentModel.BackgroundWorker();
             this.labelTime = new System.Windows.Forms.Label();
+            this.toolStripMenuItemOtsuMetod = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -202,6 +203,8 @@
             // 
             // toolStripMenuItemBinarization
             // 
+            this.toolStripMenuItemBinarization.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItemOtsuMetod});
             this.toolStripMenuItemBinarization.Name = "toolStripMenuItemBinarization";
             this.toolStripMenuItemBinarization.Size = new System.Drawing.Size(185, 22);
             this.toolStripMenuItemBinarization.Text = "Binarization";
@@ -291,6 +294,13 @@
             this.labelTime.TabIndex = 6;
             this.labelTime.Text = "Time:";
             // 
+            // toolStripMenuItemOtsuMetod
+            // 
+            this.toolStripMenuItemOtsuMetod.Name = "toolStripMenuItemOtsuMetod";
+            this.toolStripMenuItemOtsuMetod.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItemOtsuMetod.Text = "Otsu metod";
+            this.toolStripMenuItemOtsuMetod.Click += new System.EventHandler(this.toolStripMenuItemOtsuMetod_Click);
+            // 
             // MainFrame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -341,6 +351,7 @@
         private System.Windows.Forms.ToolStripMenuItem prewittToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem prewittXToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem shiftX50ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemOtsuMetod;
     }
 }
 

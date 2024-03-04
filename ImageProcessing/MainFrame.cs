@@ -138,5 +138,11 @@ namespace ImageProcessing
             ShiftFilter filter = new ShiftFilter(50, 0);
             backgroundWorkerProgress.RunWorkerAsync(filter);
         }
+
+        private void toolStripMenuItemOtsuMetod_Click(object sender, EventArgs e)
+        {
+            OtsyBinarizationFilter filter = new OtsyBinarizationFilter();
+            backgroundWorkerProgress.RunWorkerAsync(filter);
+        }
     }
 }
