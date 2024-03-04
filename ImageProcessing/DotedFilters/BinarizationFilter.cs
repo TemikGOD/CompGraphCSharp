@@ -1,16 +1,26 @@
 ﻿using System;
-using System.Threading.Tasks;
-using System.Drawing.Imaging;
-using System.Runtime.InteropServices;
+using System.Collections.Generic;
 using System.Drawing;
-using static System.Net.Mime.MediaTypeNames;
+using System.Drawing.Imaging;
+using System.Linq;
+using System.Runtime.InteropServices;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace ImageProcessing
 {
-    abstract class Filter
+    abstract class BinarizationFilter : Filter
     {
-        public virtual Bitmap ProcessImage(Bitmap sourceImage, System.ComponentModel.BackgroundWorker backgroundWorker1)
+        protected byte threshold;
+
+        public override Bitmap ProcessImage(Bitmap sourceImage, System.ComponentModel.BackgroundWorker backgroundWorker1)
         {
+            if (sourceImage.PixelFormat != PixelFormat.Format8bppIndexed)
+            {
+                GrayscaleConversionFilter filter = new GrayscaleConversionFilter();
+                sourceImage = filter.ProcessImage(sourceImage, backgroundWorker1);
+            }
+            threshold = CalculateThreshold(sourceImage);
             var rect = new Rectangle(0, 0, sourceImage.Width, sourceImage.Height);
             var data = sourceImage.LockBits(rect, ImageLockMode.ReadWrite, sourceImage.PixelFormat);
             var depth = Bitmap.GetPixelFormatSize(data.PixelFormat) / 8; //bytes per pixel
@@ -48,22 +58,19 @@ namespace ImageProcessing
             return sourceImage;
         }
 
-        public int Clamp(int value, int min, int max)
+        protected override byte[] CalculateNewPixelColor(byte[] buffer, int x, int y, int width, int depth)
         {
-            if (value < min)
-                return min;
-            if (value > max) 
-                return max;
-            return value;
+            var offset = CalculateOffset(x, y, width, depth);
+            var result = new byte[depth];
+            if (buffer[offset[0]] < threshold)
+                for (int i = 0; i < depth; i++)
+                    result[i] = 0;
+            else
+                for (int i = 0; i < depth; i++)
+                    result[i] = 255;
+            return result;
         }
 
-        protected int[] CalculateOffset(int x, int y, int width, int depth) {
-            var offset = new int[depth];
-            for (var i = 0; i < depth; i++)
-                offset[i] = ((y * width) + x) * depth + i;
-            return offset;
-        }
-
-        protected abstract byte[] CalculateNewPixelColor(byte[] buffer, int x, int y, int width, int depth);
+        protected abstract byte CalculateThreshold(Bitmap sourceImage);
     }
 }

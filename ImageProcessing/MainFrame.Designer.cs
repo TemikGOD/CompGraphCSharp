@@ -56,7 +56,11 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.backgroundWorkerProgress = new System.ComponentModel.BackgroundWorker();
             this.labelTime = new System.Windows.Forms.Label();
+<<<<<<< HEAD
             this.turnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+=======
+            this.toolStripMenuItemOtsuMetod = new System.Windows.Forms.ToolStripMenuItem();
+>>>>>>> development
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -204,6 +208,8 @@
             // 
             // toolStripMenuItemBinarization
             // 
+            this.toolStripMenuItemBinarization.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItemOtsuMetod});
             this.toolStripMenuItemBinarization.Name = "toolStripMenuItemBinarization";
             this.toolStripMenuItemBinarization.Size = new System.Drawing.Size(185, 22);
             this.toolStripMenuItemBinarization.Text = "Binarization";
@@ -294,12 +300,21 @@
             this.labelTime.TabIndex = 6;
             this.labelTime.Text = "Time:";
             // 
+<<<<<<< HEAD
             // turnToolStripMenuItem
             // 
             this.turnToolStripMenuItem.Name = "turnToolStripMenuItem";
             this.turnToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
             this.turnToolStripMenuItem.Text = "Turn";
             this.turnToolStripMenuItem.Click += new System.EventHandler(this.turnToolStripMenuItem_Click);
+=======
+            // toolStripMenuItemOtsuMetod
+            // 
+            this.toolStripMenuItemOtsuMetod.Name = "toolStripMenuItemOtsuMetod";
+            this.toolStripMenuItemOtsuMetod.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItemOtsuMetod.Text = "Otsu metod";
+            this.toolStripMenuItemOtsuMetod.Click += new System.EventHandler(this.toolStripMenuItemOtsuMetod_Click);
+>>>>>>> development
             // 
             // MainFrame
             // 
@@ -351,7 +366,11 @@
         private System.Windows.Forms.ToolStripMenuItem prewittToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem prewittXToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem shiftX50ToolStripMenuItem;
+<<<<<<< HEAD
         private System.Windows.Forms.ToolStripMenuItem turnToolStripMenuItem;
+=======
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemOtsuMetod;
+>>>>>>> development
     }
 }
 

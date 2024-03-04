@@ -140,6 +140,7 @@ namespace ImageProcessing
             backgroundWorkerProgress.RunWorkerAsync(filter);
         }
 
+<<<<<<< HEAD
         private void toolStripMenuItemBrightness_Click(object sender, EventArgs e)
         {
 
@@ -148,6 +149,11 @@ namespace ImageProcessing
         private void turnToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Turn filter = new Turn(Math.PI/4, pictureBoxImage.Image.Width/2, pictureBoxImage.Image.Height/2);
+=======
+        private void toolStripMenuItemOtsuMetod_Click(object sender, EventArgs e)
+        {
+            OtsyBinarizationFilter filter = new OtsyBinarizationFilter();
+>>>>>>> development
             backgroundWorkerProgress.RunWorkerAsync(filter);
         }
     }
