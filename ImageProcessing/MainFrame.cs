@@ -169,5 +169,11 @@ namespace ImageProcessing
             GlassFilter filter = new GlassFilter(rand);
             backgroundWorkerProgress.RunWorkerAsync(filter);
         }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            OtsyBinarizationFilter filter = new OtsyBinarizationFilter();
+            backgroundWorkerProgress.RunWorkerAsync(filter);
+        }
     }
 }
