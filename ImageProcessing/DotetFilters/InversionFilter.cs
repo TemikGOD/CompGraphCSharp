@@ -10,12 +10,15 @@ namespace ImageProcessing
 {
     internal class InversionFilter : Filter
     {
-        protected override void CalculateNewPixelColor(byte[] buffer, int x, int y, int width, int depth)
+        protected override byte[] CalculateNewPixelColor(byte[] buffer, int x, int y, int width, int depth)
         {
-            var offset = ((y * width) + x) * depth;
-            buffer[offset + 0] = (byte)(255 - buffer[offset + 0]);
-            buffer[offset + 1] = (byte)(255 - buffer[offset + 1]);
-            buffer[offset + 2] = (byte)(255 - buffer[offset + 2]);
+            var offset = new int[depth];
+            for (var i = 0; i < depth; i++)
+                offset[i] = ((y * width) + x) * depth;
+            var resultColor = new byte[depth];
+            for (int i = 0; i < depth; i++)
+                resultColor[i] = (byte)(255 - buffer[offset[i]]);
+            return resultColor;
         }
     }
 }
