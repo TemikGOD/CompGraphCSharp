@@ -1,28 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ImageProcessing.MatrixFilters
+namespace ImageProcessing.DotetFilters
 {
-    internal class ShiftFilter : Filter
+    internal class GlassFilter : Filter
     {
-        protected int ShiftX, ShiftY;
-        public ShiftFilter(int shiftX, int shiftY)
-        {
-            ShiftX = shiftX;
-            ShiftY = shiftY;
+        protected Random random;
+
+        public GlassFilter(Random random) { 
+            this.random = random;
         }
 
         protected override byte[] CalculateNewPixelColor(byte[] buffer, int x, int y, int width, int depth)
         {
             var offset = new int[depth];
             var resultColor = new byte[depth];
-            if (x + ShiftX < width - 1 && y + ShiftY < buffer.Length / depth / width - 1)
+            int NewX, NewY;
+            //Random random = new Random();
+            NewX = (int)(x + (random.NextDouble() - 0.5) * 10);
+            NewY = (int)(y + (random.NextDouble() - 0.5) * 10);
+            if (NewX >= 0 && NewX < width - 1 && NewY >= 0 && NewY < buffer.Length / depth / width - 1)
             {
                 for (var i = 0; i < depth; i++)
-                    offset[i] = (((y + ShiftY) * width) + x + ShiftX) * depth + i;
+                    offset[i] = ((NewY * width) + NewX) * depth + i;
+
                 for (int i = 0; i < depth; i++)
                     resultColor[i] = buffer[offset[i]];
             }

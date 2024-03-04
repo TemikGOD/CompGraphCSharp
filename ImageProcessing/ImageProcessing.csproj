@@ -46,16 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
+    <Compile Include="DotetFilters\GlassFilter.cs" />
     <Compile Include="DotetFilters\Turn.cs" />
-=======
-    <Compile Include="DotedFilters\BinarizationFilter.cs" />
->>>>>>> development
+    <Compile Include="DotetFilters\WavesXFilter.cs" />
+    <Compile Include="DotetFilters\WavesYFilter.cs" />
     <Compile Include="MatrixFilters\BlurFilter.cs" />
     <Compile Include="MatrixFilters\EmbossFilter.cs" />
-    <Compile Include="DotedFilters\Filter.cs" />
-    <Compile Include="DotedFilters\GrayscaleConversionFilter.cs" />
-    <Compile Include="DotedFilters\InversionFilter.cs" />
+    <Compile Include="DotetFilters\Filter.cs" />
+    <Compile Include="DotetFilters\GrayscaleConversionFilter.cs" />
+    <Compile Include="DotetFilters\InversionFilter.cs" />
     <Compile Include="MainFrame.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,8 +65,7 @@
     <Compile Include="MatrixFilters\MotionBlur.cs" />
     <Compile Include="MatrixFilters\PrewittX.cs" />
     <Compile Include="MatrixFilters\PrewittY.cs" />
-    <Compile Include="DotedFilters\ShiftFilter.cs" />
-    <Compile Include="DotedFilters\OtsyBinarizationFilter.cs" />
+    <Compile Include="DotetFilters\ShiftFilter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MatrixFilters\ScharrX.cs" />
