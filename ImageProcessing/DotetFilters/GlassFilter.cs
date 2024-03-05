@@ -17,25 +17,14 @@ namespace ImageProcessing.DotetFilters
 
         protected override byte[] CalculateNewPixelColor(byte[] buffer, int x, int y, int width, int depth)
         {
-            var offset = new int[depth];
             var resultColor = new byte[depth];
             int NewX, NewY;
             //Random random = new Random();
-            NewX = (int)(x + (random.NextDouble() - 0.5) * 10);
-            NewY = (int)(y + (random.NextDouble() - 0.5) * 10);
-            if (NewX >= 0 && NewX < width - 1 && NewY >= 0 && NewY < buffer.Length / depth / width - 1)
-            {
-                for (var i = 0; i < depth; i++)
-                    offset[i] = ((NewY * width) + NewX) * depth + i;
-
-                for (int i = 0; i < depth; i++)
-                    resultColor[i] = buffer[offset[i]];
-            }
-            else
-            {
-                for (int i = 0; i < depth; i++)
-                    resultColor[i] = 0;
-            }
+            NewX = Clamp((int)(x + (random.NextDouble() - 0.5) * 10), x, width - 1);
+            NewY = Clamp((int)(y + (random.NextDouble() - 0.5) * 10), y, buffer.Length / width / depth - 1);
+            var offset = CalculateOffset(NewX, NewY, width, depth);
+            for (int i = 0; i < depth; i++)
+                resultColor[i] = buffer[offset[i]];
             return resultColor;
         }
     }

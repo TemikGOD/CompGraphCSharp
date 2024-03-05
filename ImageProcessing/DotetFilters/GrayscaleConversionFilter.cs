@@ -32,5 +32,10 @@ namespace ImageProcessing
                 resultColor[i] = ySRGB;
             return resultColor;
         }
+
+        public byte[] GrayscalePixel(byte[] buffer, int x, int y, int width, int depth)
+        {
+            return CalculateNewPixelColor(buffer, x, y, width, depth);
+        }
     }
 }

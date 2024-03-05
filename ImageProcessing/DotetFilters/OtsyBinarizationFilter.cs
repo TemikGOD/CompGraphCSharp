@@ -31,14 +31,6 @@ namespace ImageProcessing
                         max = buffer[offset[0]];
                 }
             });
-            /*for (int i = 0; i < sourceImage.Width; i++)
-                for (int j = 0; j < sourceImage.Height; j++)
-                {
-                    if (sourceImage.GetPixel(i, j).R < min)
-                        min = sourceImage.GetPixel(i, j).R;
-                    if (sourceImage.GetPixel(i, j).R > max)
-                        max = sourceImage.GetPixel(i, j).R;
-                }*/
             byte histSize = (byte)(max - min + 1);
             int[] histogram = new int[histSize];
             for (int i = 0; i < data.Width; i++)

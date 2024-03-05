@@ -110,30 +110,6 @@ namespace ImageProcessing
             backgroundWorkerProgress.RunWorkerAsync(filter);
         }
 
-        private void scharrYToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ScharrY filter = new ScharrY();
-            backgroundWorkerProgress.RunWorkerAsync(filter);
-        }
-
-        private void scharrXToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ScharrX filter = new ScharrX();
-            backgroundWorkerProgress.RunWorkerAsync(filter);
-        }
-
-        private void prewittToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            PrewittY filter = new PrewittY();
-            backgroundWorkerProgress.RunWorkerAsync(filter);
-        }
-
-        private void prewittXToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            PrewittX filter = new PrewittX();
-            backgroundWorkerProgress.RunWorkerAsync(filter);
-        }
-
         private void shiftX50ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ShiftFilter filter = new ShiftFilter(50, 0);
@@ -142,7 +118,8 @@ namespace ImageProcessing
 
         private void toolStripMenuItemBrightness_Click(object sender, EventArgs e)
         {
-
+            BrightnessFilter filter = new BrightnessFilter();
+            backgroundWorkerProgress.RunWorkerAsync(filter);
         }
 
         private void turnToolStripMenuItem_Click(object sender, EventArgs e)
@@ -174,6 +151,72 @@ namespace ImageProcessing
         {
             OtsyBinarizationFilter filter = new OtsyBinarizationFilter();
             backgroundWorkerProgress.RunWorkerAsync(filter);
+        }
+
+        private void sepiaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SepiaFilter filter = new SepiaFilter();
+            backgroundWorkerProgress.RunWorkerAsync(filter);
+        }
+
+        private void WavesXToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            WavesXFilter wavesXFilter = new WavesXFilter();
+            backgroundWorkerProgress.RunWorkerAsync(wavesXFilter);
+        }
+
+        private void WavesYToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            WavesYFilter wavesYFilter = new WavesYFilter();
+            backgroundWorkerProgress.RunWorkerAsync(wavesYFilter);
+        }
+
+        private void scharrXToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            ScharrX scharrX = new ScharrX();
+            backgroundWorkerProgress.RunWorkerAsync(scharrX);
+        }
+
+        private void scharrYToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            ScharrY scharrY = new ScharrY();
+            backgroundWorkerProgress.RunWorkerAsync(scharrY);
+        }
+
+        private void prewittXToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            PrewittX prewittX = new PrewittX();
+            backgroundWorkerProgress.RunWorkerAsync(prewittX);
+        }
+
+        private void prewittYToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            PrewittY prewittY = new PrewittY();
+            backgroundWorkerProgress.RunWorkerAsync( prewittY);
+        }
+
+        private void toolStripMenuItemGaussian_Click(object sender, EventArgs e)
+        {
+            GaussianFilter gaussianFilter = new GaussianFilter();
+            backgroundWorkerProgress.RunWorkerAsync (gaussianFilter);
+        }
+
+        private void soobelXToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SobelX sobelX = new SobelX();
+            backgroundWorkerProgress.RunWorkerAsync(sobelX);
+        }
+
+        private void sobelYToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SobelY sobelY = new SobelY();
+            backgroundWorkerProgress.RunWorkerAsync( sobelY);
+        }
+
+        private void medianToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MedianFilter medianFilter = new MedianFilter();
+            backgroundWorkerProgress.RunWorkerAsync(medianFilter);
         }
     }
 }
