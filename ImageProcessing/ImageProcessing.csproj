@@ -52,6 +52,7 @@
     <Compile Include="DotetFilters\Turn.cs" />
     <Compile Include="DotetFilters\WavesXFilter.cs" />
     <Compile Include="DotetFilters\WavesYFilter.cs" />
+    <Compile Include="MatrixFilters\GlowingEdgesFilter.cs" />
     <Compile Include="MatrixFilters\GaussianFilter.cs" />
     <Compile Include="MatrixFilters\BlurFilter.cs" />
     <Compile Include="MatrixFilters\EmbossFilter.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="DotetFilters\ShiftFilter.cs" />
     <Compile Include="DotetFilters\OtsyBinarizationFilter.cs" />
     <Compile Include="MatrixFilters\MedianFilter.cs" />
+    <Compile Include="MatrixFilters\MaximumFilter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MatrixFilters\ScharrX.cs" />

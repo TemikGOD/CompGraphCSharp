@@ -69,6 +69,8 @@
             this.soobelXToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobelYToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.medianToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.maximumToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.glovingEgesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -134,7 +136,9 @@
             this.scharrToolStripMenuItem,
             this.prewittToolStripMenuItem,
             this.sobelToolStripMenuItem,
-            this.medianToolStripMenuItem});
+            this.medianToolStripMenuItem,
+            this.maximumToolStripMenuItem,
+            this.glovingEgesToolStripMenuItem});
             this.toolStripMenuItemMatrix.Name = "toolStripMenuItemMatrix";
             this.toolStripMenuItemMatrix.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItemMatrix.Text = "Matrix";
@@ -411,6 +415,20 @@
             this.medianToolStripMenuItem.Text = "Median";
             this.medianToolStripMenuItem.Click += new System.EventHandler(this.medianToolStripMenuItem_Click);
             // 
+            // maximumToolStripMenuItem
+            // 
+            this.maximumToolStripMenuItem.Name = "maximumToolStripMenuItem";
+            this.maximumToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.maximumToolStripMenuItem.Text = "Maximum";
+            this.maximumToolStripMenuItem.Click += new System.EventHandler(this.maximumToolStripMenuItem_Click);
+            // 
+            // glovingEgesToolStripMenuItem
+            // 
+            this.glovingEgesToolStripMenuItem.Name = "glovingEgesToolStripMenuItem";
+            this.glovingEgesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.glovingEgesToolStripMenuItem.Text = "Gloving eges";
+            this.glovingEgesToolStripMenuItem.Click += new System.EventHandler(this.glovingEgesToolStripMenuItem_Click);
+            // 
             // MainFrame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -474,6 +492,8 @@
         private System.Windows.Forms.ToolStripMenuItem soobelXToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sobelYToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem medianToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem maximumToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem glovingEgesToolStripMenuItem;
     }
 }
 
