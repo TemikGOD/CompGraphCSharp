@@ -73,6 +73,7 @@
     <Compile Include="MatrixFilters\ScharrX.cs" />
     <Compile Include="MatrixFilters\ScharrY.cs" />
     <Compile Include="MatrixFilters\SharpeningFilter.cs" />
+    <Compile Include="DotetFilters\SepiaFilter.cs" />
     <EmbeddedResource Include="MainFrame.resx">
       <DependentUpon>MainFrame.cs</DependentUpon>
     </EmbeddedResource>

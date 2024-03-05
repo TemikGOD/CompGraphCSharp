@@ -61,6 +61,7 @@
             this.backgroundWorkerProgress = new System.ComponentModel.BackgroundWorker();
             this.labelTime = new System.Windows.Forms.Label();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.sepiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -204,7 +205,8 @@
             this.turnToolStripMenuItem,
             this.wavesYToolStripMenuItem,
             this.wavesXToolStripMenuItem,
-            this.glassToolStripMenuItem});
+            this.glassToolStripMenuItem,
+            this.sepiaToolStripMenuItem});
             this.toolStripMenuItemSpot.Name = "toolStripMenuItemSpot";
             this.toolStripMenuItemSpot.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItemSpot.Text = "Spot";
@@ -338,6 +340,13 @@
             this.toolStripMenuItem1.Text = "Otsu metod";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
+            // sepiaToolStripMenuItem
+            // 
+            this.sepiaToolStripMenuItem.Name = "sepiaToolStripMenuItem";
+            this.sepiaToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.sepiaToolStripMenuItem.Text = "Sepia";
+            this.sepiaToolStripMenuItem.Click += new System.EventHandler(this.sepiaToolStripMenuItem_Click);
+            // 
             // MainFrame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -393,6 +402,7 @@
         private System.Windows.Forms.ToolStripMenuItem wavesXToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem glassToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem sepiaToolStripMenuItem;
     }
 }
 

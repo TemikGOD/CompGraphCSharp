@@ -175,5 +175,11 @@ namespace ImageProcessing
             OtsyBinarizationFilter filter = new OtsyBinarizationFilter();
             backgroundWorkerProgress.RunWorkerAsync(filter);
         }
+
+        private void sepiaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SepiaFilter filter = new SepiaFilter();
+            backgroundWorkerProgress.RunWorkerAsync(filter);
+        }
     }
 }
