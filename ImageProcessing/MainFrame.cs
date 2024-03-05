@@ -218,5 +218,17 @@ namespace ImageProcessing
             MedianFilter medianFilter = new MedianFilter();
             backgroundWorkerProgress.RunWorkerAsync(medianFilter);
         }
+
+        private void maximumToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MaximumFilter maximumFilter = new MaximumFilter();
+            backgroundWorkerProgress.RunWorkerAsync(maximumFilter);
+        }
+
+        private void glovingEgesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GlowingEdgesFilter glowingEdgesFilter = new GlowingEdgesFilter();
+            backgroundWorkerProgress.RunWorkerAsync(glowingEdgesFilter);
+        }
     }
 }
