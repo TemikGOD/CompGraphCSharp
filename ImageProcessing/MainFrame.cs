@@ -230,5 +230,17 @@ namespace ImageProcessing
             GlowingEdgesFilter glowingEdgesFilter = new GlowingEdgesFilter();
             backgroundWorkerProgress.RunWorkerAsync(glowingEdgesFilter);
         }
+
+        private void greyWorldToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GreyWorld greyWorld = new GreyWorld();
+            backgroundWorkerProgress.RunWorkerAsync(greyWorld);
+        }
+
+        private void perfectReflectorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PerfectReflectorFilter perfect = new PerfectReflectorFilter();
+            backgroundWorkerProgress.RunWorkerAsync(perfect);
+        }
     }
 }
